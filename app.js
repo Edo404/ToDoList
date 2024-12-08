@@ -1,13 +1,17 @@
-let ToDoList = [];
+//get the text area
+let textArea = document.getElementById('text');
+//get the Add button
+let addBtn = document.querySelector('.add');
+//get the list of tasks
+let ul = document.querySelector('ul');
 
-const addBtn = document.querySelector('.add');
-const listItems = document.querySelector('.list');
-const item = document.querySelector('li');
-
-
-addBtn.addEventListener("click", function(e) {
-    const actualText = document.getElementById('text').value;
-    ToDoList.push(actualText);
-    console.log(ToDoList);
-    listItems.textContent = ToDoList;
+//when click the add btn, get the value of the text inserted
+//create a li HTML
+//assign to the textContent of the li, the text inserted
+//append the li element in the ul list
+addBtn.addEventListener("click", function() {
+    let actualText = textArea.value;
+    let li = document.createElement('li');
+    li.textContent = actualText;
+    ul.appendChild(li);
 })
