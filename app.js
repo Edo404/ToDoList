@@ -12,6 +12,16 @@ let ul = document.querySelector('ul');
 addBtn.addEventListener("click", function() {
     let actualText = textArea.value;
     let li = document.createElement('li');
+    let edit = document.createElement('i');
+    let trash = document.createElement('i');
     li.textContent = actualText;
+    edit.className = "fa-solid fa-pen";
+    trash.className = "fa-solid fa-trash";
+
+    
     ul.appendChild(li);
+    ul.appendChild(edit);
+    ul.appendChild(trash);
+
+    ul.appendChild(row);
 })
