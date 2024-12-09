@@ -18,10 +18,13 @@ addBtn.addEventListener("click", function() {
     edit.className = "fa-solid fa-pen";
     trash.className = "fa-solid fa-trash";
 
-    
     ul.appendChild(li);
     ul.appendChild(edit);
     ul.appendChild(trash);
+})
 
-    ul.appendChild(row);
+let trashIcon = document.querySelector('.fa-solid fa-trash');
+
+trashIcon.addEventListener("click", function() {
+    console.log("click avvenuto");
 })
