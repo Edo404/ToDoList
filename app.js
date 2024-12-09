@@ -10,6 +10,12 @@ let ul = document.querySelector('ul');
 //assign to the textContent of the li, the text inserted
 //create the edit and the trash icons inside the li
 //append the li element in the ul list
+textArea.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        addBtn.click();
+    }
+})
+
 addBtn.addEventListener("click", function() {
     let actualText = textArea.value;
     let row = document.createElement('li');
